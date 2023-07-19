@@ -1,50 +1,45 @@
-/* Reset default margin and padding */
-body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-}
+/* styles.css */
 
-/* Set the height of the header */
+/* Add some padding to the header to increase spacing between the logo and navigation links */
 header {
-    height: 80px;
-    background-color: #333;
-    color: #fff;
-}
-
-/* Set the styles for the header content */
-header h1 {
-    line-height: 80px;
-    padding: 0 20px;
-}
-
-/* Set the height of the footer */
-footer {
-    height: 60px;
-    background-color: #333;
-    color: #fff;
-}
-
-/* Set the styles for the footer content */
-footer p {
-    line-height: 60px;
-    padding: 0 20px;
-}
-
-/* Set the styles for the main sections */
-main section {
-    width: 100%;
-    padding: 40px 20px;
-    background-color: #f2f2f2;
-}
-
-/* Set the styles for the first section */
-main section:first-child {
-    padding-top: 80px; /* Adjust for the height of the header */
-}
-
-/* Set the styles for the last section */
-main section:last-child {
-    padding-bottom: 60px; /* Adjust for the height of the footer */
-}
-
-/* Add additional styles for the segments in between as needed */
+    padding: 10px;
+  }
+  
+  /* Increase space between header buttons */
+  .navbar-nav .nav-item {
+    margin-right: 20px;
+  }
+  
+  /* Center the header logo */
+  .navbar-brand {
+    margin: 0 auto;
+  }
+  
+  /* Add some padding to the main content sections */
+  main {
+    padding: 20px;
+  }
+  
+  /* Style the carousel caption text */
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 10px;
+    color: white;
+  }
+  
+  /* Add some space between the carousel and other sections */
+  #carouselSection {
+    margin-top: 30px;
+  }
+  
+  /* Center the footer logo and add some padding */
+  footer .navbar-brand {
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  /* Style the footer text */
+  footer .navbar-text {
+    padding: 10px;
+    text-align: right;
+  }
