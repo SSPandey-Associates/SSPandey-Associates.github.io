@@ -7,7 +7,7 @@ header {
   
   /* Increase space between header buttons */
   .navbar-nav .nav-item {
-    margin-right: 20px;
+    margin-right: 50px;
   }
   
   /* Center the header logo */
@@ -29,7 +29,7 @@ header {
   
   /* Add some space between the carousel and other sections */
   #carouselSection {
-    margin-top: 30px;
+    margin-top: 50px;
   }
   
   /* Center the footer logo and add some padding */
