@@ -11,11 +11,11 @@ header {
     display: block; /* Make the logo a block-level element to center it */
   }
   
-  /* Ensure header buttons are listed horizontally */
+  /* Ensure header buttons are listed horizontally and centered */
   .navbar-nav {
     display: flex; /* Use flexbox to list items horizontally */
-    align-items: center; /* Align items vertically within the navbar */
     justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align items vertically within the navbar */
   }
   
   /* Add some space between the header buttons */
