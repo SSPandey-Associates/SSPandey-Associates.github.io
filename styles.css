@@ -2,7 +2,7 @@
 
 /* Add some padding to the header to increase spacing between the logo and navigation links */
 header {
-    padding: 50px;
+    padding: 20px;
   }
   
   /* Center the header logo */
@@ -11,21 +11,21 @@ header {
     display: block; /* Make the logo a block-level element to center it */
   }
   
-  /* Ensure header buttons are listed horizontally and centered */
+  /* Ensure header buttons are listed horizontally */
   .navbar-nav {
+    width: 100%; /* Take up the full width of the navbar */
     display: flex; /* Use flexbox to list items horizontally */
     justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Align items vertically within the navbar */
   }
   
   /* Add some space between the header buttons */
   .navbar-nav .nav-item {
-    margin-right: 30px;
+    margin-right: 20px;
   }
   
   /* Add some padding to the main content sections */
   main {
-    padding: 90px;
+    padding: 30px;
   }
   
   /* Style the carousel caption text */
@@ -43,7 +43,7 @@ header {
   /* Center the footer logo and add some padding */
   footer .navbar-brand {
     margin: 0 auto;
-    padding: 30px;
+    padding: 10px;
   }
   
   /* Style the footer text */
