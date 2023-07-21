@@ -2,7 +2,7 @@
 
 /* Add some padding to the header to increase spacing between the logo and navigation links */
 header {
-    padding: 50px;
+    padding: 20px;
   }
   
   /* Increase space between header buttons */
@@ -17,7 +17,7 @@ header {
   
   /* Add some padding to the main content sections */
   main {
-    padding: 20px;
+    padding: 30px;
   }
   
   /* Style the carousel caption text */
@@ -29,7 +29,7 @@ header {
   
   /* Add some space between the carousel and other sections */
   #carouselSection {
-    margin-top: 50px;
+    margin-top: 100px;
   }
   
   /* Center the footer logo and add some padding */
