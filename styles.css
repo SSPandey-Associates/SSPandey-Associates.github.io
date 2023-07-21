@@ -2,7 +2,7 @@
 
 /* Add some padding to the header to increase spacing between the logo and navigation links */
 header {
-    padding: 20px;
+    padding: 50px;
   }
   
   /* Center the header logo */
@@ -20,12 +20,12 @@ header {
   
   /* Add some space between the header buttons */
   .navbar-nav .nav-item {
-    margin-right: 20px;
+    margin-right: 30px;
   }
   
   /* Add some padding to the main content sections */
   main {
-    padding: 30px;
+    padding: 90px;
   }
   
   /* Style the carousel caption text */
@@ -43,7 +43,7 @@ header {
   /* Center the footer logo and add some padding */
   footer .navbar-brand {
     margin: 0 auto;
-    padding: 10px;
+    padding: 30px;
   }
   
   /* Style the footer text */
