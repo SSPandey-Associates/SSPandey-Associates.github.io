@@ -4,15 +4,21 @@
 header {
     padding: 20px;
   }
-  
-  /* Increase space between header buttons */
-  .navbar-nav .nav-item {
-    margin-right: 50px;
-  }
-  
   /* Center the header logo */
   .navbar-brand {
-    margin: 10 auto;
+    margin: 0 auto; /* Center the logo horizontally */
+    display: block; /* Make the logo a block-level element to center it */
+  }
+  
+  /* Center the header buttons */
+  .navbar-nav {
+    margin: 0 auto; /* Center the navbar links horizontally */
+    display: table; /* Use display: table to center the list items */
+  }
+  
+  /* Add some space between the header buttons */
+  .navbar-nav .nav-item {
+    margin-right: 20px;
   }
   
   /* Add some padding to the main content sections */
