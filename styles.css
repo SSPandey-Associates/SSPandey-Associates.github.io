@@ -14,7 +14,8 @@ header {
   /* Ensure header buttons are listed horizontally */
   .navbar-nav {
     display: flex; /* Use flexbox to list items horizontally */
-    align-items: flex; /* Align items vertically within the navbar */
+    align-items: center; /* Align items vertically within the navbar */
+    justify-content: center; /* Center the items horizontally */
   }
   
   /* Add some space between the header buttons */
