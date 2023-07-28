@@ -39,6 +39,22 @@ header {
   #carouselSection {
     margin-top: 100px;
   }
+
+  /* CSS for centralizing the image in the container */
+  .carousel-inner .carousel-item .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Set a suitable height for the images */
+    max-width: 100%; /* Limit the width to prevent overflow */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+
+  /* CSS for adjusting the size of the images within the container */
+  .carousel-inner .carousel-item .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+  }
   
   /* Center the footer logo and add some padding */
   footer .navbar-brand {
