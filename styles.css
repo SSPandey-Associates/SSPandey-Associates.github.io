@@ -53,9 +53,6 @@ header {
   }
   
   /* Create more space for scrolling */
-  body {
-    padding-bottom: 100px; /* Add padding at the bottom of the body */
-  }
 
   /* Styles for the image container and overlay */
   .image-container {
