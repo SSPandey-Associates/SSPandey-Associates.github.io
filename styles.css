@@ -29,7 +29,7 @@ header {
   }
   .carousel-container {
     width: 100%; /* Set the desired width for the container */
-    max-width: 800px; /* Set the maximum width for the container if needed */
+    max-width: 300px; /* Set the maximum width for the container if needed */
   }
 
   .carousel-container .carousel-inner {
@@ -207,3 +207,11 @@ header {
   p {
     color: #545454;
   }
+
+  /* Add this CSS section to styles.css or your CSS file */
+.blog-image {
+  width: 100%;
+  max-height: 300px; /* Adjust the max-height as needed for the images */
+  object-fit: cover;
+  margin-bottom: 20px;
+}
