@@ -29,37 +29,41 @@
   }
 
   /* Carousel Styles */
-.carousel-container {
-  width: 100%; /* Set the desired width for the container */
-  max-width: 500px; /* Set the maximum width for the container if needed */
-  margin: 0 auto; /* Center the container horizontally */
+  .carousel-container {
+    width: 100%; /* Set the desired width for the container */
+    max-width: 600px; /* Set the maximum width for the container if needed */
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Hide any overflow to ensure the compact view */
   }
-
+  
   .carousel-container .carousel-inner {
     height: 0;
     padding-top: 177.77%; /* 9:16 aspect ratio (9 / 16 = 0.5625) */
+    position: relative; /* Set the position to relative for absolute positioning of items */
   }
-
+  
   .carousel-container .carousel-item {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     height: 100%;
-    overflow: hidden;
+    width: 100%;
   }
-
+  
   .carousel-container .image-container {
     flex: 0 0 50%;
     height: 100%;
     overflow: hidden;
   }
-
+  
   .carousel-container .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-
+  
   .carousel-container .carousel-caption {
     flex: 0 0 50%;
     padding: 20px;
