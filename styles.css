@@ -29,11 +29,12 @@ header {
   }
   .carousel-container {
     width: 100%; /* Set the desired width for the container */
-    max-width: 300px; /* Set the maximum width for the container if needed */
+    max-width: 600px; /* Set the maximum width for the container if needed */
+    height: 400px; /* Set the desired height for the carousel elements */
   }
 
   .carousel-container .carousel-inner {
-      height: 400px; /* Set the desired height for the carousel elements */
+      height: 100%; /* Ensure the carousel elements take up the full height of the container */
   }
 
   .carousel-container .carousel-item {
