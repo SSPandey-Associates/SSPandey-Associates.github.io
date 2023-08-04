@@ -40,38 +40,24 @@
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
+    height: 400px; /* Set a fixed height for the carousel container */
   }
-
-  .carousel-container .carousel-item {
-    width: 90%;
-    margin: 0 auto;
-    display: none;
-    height: calc(400px + 150px);
-    /* Increase the height by 75px */
-  }
-
-  .carousel-container .carousel-item.active {
-    display: block;
-  }
-
-  .carousel-container .image-container {
-    width: 100%;
-    height: 500px;
-    /* Set the desired height of the carousel image */
-    overflow: hidden;
-  }
-
-  .carousel-container .image-container img {
-    width: 100%;
+  .carousel-inner {
+    display: flex;
     height: 100%;
+  }
+  .carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .carousel-item img {
+    max-height: 100%;
     object-fit: cover;
   }
-
-  .carousel-container .carousel-caption {
-    width: 100%;
-    height: 75px;
-    /* Increase the height by 75px */
-    text-align: center;
+  .carousel-caption {
+    padding: 20px;
   }
 
   /* Services Page Styles */
