@@ -34,61 +34,36 @@
     padding: 30px;
     /* Add some padding to the main content sections */
   }
+  
+  .carousel-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
 
-    .carousel-container {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-  
-    .carousel-inner {
-      height: 100%;
-    }
-  
-    .carousel-container .carousel-item {
-      position: relative;
-      display: flex;
-      align-items: center;
-      height: 100%;
-    }
-  
-    .carousel-container .image-container {
-      flex: 0 0 50%;
-      height: 100%;
-      overflow: hidden;
-    }
-  
-    .carousel-container .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  
-    .carousel-container .carousel-caption {
-      flex: 0 0 50%;
-      padding: 20px;
-    }
+  .carousel-container .carousel-item {
+    height: 400px;
+    display: flex;
+    align-items: center;
+  }
 
-    .carousel-inner {
-      overflow: hidden;
-    }
-  
-    .carousel-item-next.carousel-item-left,
-    .carousel-item-prev.carousel-item-right {
-      transform: translateX(0);
-    }
-  
-    .carousel-item-right.active,
-    .carousel-item-left.active {
-      transform: translateX(0);
-    }
-  
-    .carousel-item-right,
-    .carousel-item-left {
-      transform: translateX(0);
-    }
+  .carousel-container .image-container {
+    flex: 0 0 50%;
+    height: 100%;
+    overflow: hidden;
+  }
 
+  .carousel-container .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-container .carousel-caption {
+    flex: 0 0 50%;
+    padding: 20px;
+  }
   /* Services Page Styles */
   #services {
     padding: 50px 0;
