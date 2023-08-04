@@ -34,30 +34,43 @@
     padding: 30px;
     /* Add some padding to the main content sections */
   }
-  
+
   .carousel-container {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
   }
+
   .carousel-container .carousel-item {
+    width: 75%;
+    margin: 0 auto;
     display: none;
+    height: calc(400px + 75px);
+    /* Increase the height by 75px */
   }
+
   .carousel-container .carousel-item.active {
     display: block;
   }
+
   .carousel-container .image-container {
     width: 100%;
-    height: 400px; /* Set the desired height of the carousel */
+    height: 400px;
+    /* Set the desired height of the carousel image */
     overflow: hidden;
   }
+
   .carousel-container .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .carousel-container .carousel-caption {
+    width: 100%;
+    height: 75px;
+    /* Increase the height by 75px */
     text-align: center;
   }
 
