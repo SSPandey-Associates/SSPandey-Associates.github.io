@@ -34,14 +34,7 @@
     padding: 30px;
     /* Add some padding to the main content sections */
   }
-
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
+  
   .carousel,
   .item,
   .active {
@@ -80,7 +73,7 @@
   }
 
   .carousel .carousel-inner .bg3 {
-    background-image: url('Pictures/Screen\ Shot\ 2023-07-08\ at\ 1.11.20\ AM.png');
+    background-image: url('Pictures/Screen%20Shot%202023-07-08%20at%201.11.20%20AM.png');
     background-position: center bottom;
   }
 
