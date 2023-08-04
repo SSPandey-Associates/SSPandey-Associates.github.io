@@ -43,10 +43,10 @@
   }
 
   .carousel-container .carousel-item {
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     display: none;
-    height: calc(400px + 75px);
+    height: calc(400px + 150px);
     /* Increase the height by 75px */
   }
 
