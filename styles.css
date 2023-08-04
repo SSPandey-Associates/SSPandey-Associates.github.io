@@ -70,6 +70,25 @@
       padding: 20px;
     }
 
+    .carousel-inner {
+      overflow: hidden;
+    }
+  
+    .carousel-item-next.carousel-item-left,
+    .carousel-item-prev.carousel-item-right {
+      transform: translateX(0);
+    }
+  
+    .carousel-item-right.active,
+    .carousel-item-left.active {
+      transform: translateX(0);
+    }
+  
+    .carousel-item-right,
+    .carousel-item-left {
+      transform: translateX(0);
+    }
+
   /* Services Page Styles */
   #services {
     padding: 50px 0;
