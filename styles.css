@@ -34,48 +34,41 @@
     padding: 30px;
     /* Add some padding to the main content sections */
   }
+
+    .carousel-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
   
-  .carousel,
-  .item,
-  .active {
-    height: 100%;
-  }
-
-  .carousel-inner {
-    height: 100%;
-  }
-
-  .carousel {
-    margin-bottom: 60px;
-  }
-
-  .carousel-caption {
-    z-index: 10;
-  }
-
-  .carousel .item {
-    background-color: #777;
-  }
-
-  .carousel .carousel-inner .bg {
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .carousel .carousel-inner .bg1 {
-    background-image: url('Pictures/armed-forces-tribunal759.jpeg');
-    background-position: center top;
-  }
-
-  .carousel .carousel-inner .bg2 {
-    background-image: url('Pictures/gavel.jpeg');
-    background-position: center center;
-  }
-
-  .carousel .carousel-inner .bg3 {
-    background-image: url('Pictures/Screen%20Shot%202023-07-08%20at%201.11.20%20AM.png');
-    background-position: center bottom;
-  }
+    .carousel-inner {
+      height: 100%;
+    }
+  
+    .carousel-container .carousel-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  
+    .carousel-container .image-container {
+      flex: 0 0 50%;
+      height: 100%;
+      overflow: hidden;
+    }
+  
+    .carousel-container .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .carousel-container .carousel-caption {
+      flex: 0 0 50%;
+      padding: 20px;
+    }
 
   /* Services Page Styles */
   #services {
