@@ -61,15 +61,22 @@
   }
 
   .carousel-item {
+    height: 400px; /* Set a fixed height for the carousel slides */
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
   .slide-image img {
     width: 100%;
-    max-height: 400px; /* Adjust the height as needed */
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; /* Maintain the aspect ratio and fill the container */
   }
   
   .slide-content {
@@ -80,11 +87,11 @@
     /* For smaller screens, stack slide image and content vertically */
     .carousel-item {
       flex-direction: column;
+      height: auto; /* Remove fixed height for smaller screens */
     }
   
-    .slide-content {
-      padding: 20px;
-      text-align: center;
+    .slide-image {
+      height: 200px; /* Set a smaller height for slide images on smaller screens */
     }
   }
 
