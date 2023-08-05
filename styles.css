@@ -182,6 +182,22 @@
     /* Style the footer text */
   }
 
+  /* Custom CSS for Google Map Container */
+  .map-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Aspect ratio 16:9 (height / width) */
+    height: 0;
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   /* Hover Overlay Styles */
   .image-container {
     position: relative;
