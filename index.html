@@ -10,7 +10,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io (1)/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io (1)/favicon-16x16.png">
     <link rel="manifest" href="favicon_io (1)/site.webmanifest">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
@@ -269,7 +268,34 @@
             });
         });
     </script>
-    <script src="script.js"></script>
+    <script>
+        // Function to show the modal
+        function showPopup() {
+          const modalContainer = document.getElementById('popupModal');
+          modalContainer.style.opacity = '1';
+          modalContainer.style.pointerEvents = 'auto';
+        }
+      
+        // Function to hide the modal and redirect to the previous page
+        function redirectToPreviousPage() {
+          const modalContainer = document.getElementById('popupModal');
+          modalContainer.style.opacity = '0';
+          modalContainer.style.pointerEvents = 'none';
+          window.history.back();
+        }
+      
+        // Function to hide the modal when accept is clicked
+        function acceptAndClose() {
+          const modalContainer = document.getElementById('popupModal');
+          modalContainer.style.opacity = '0';
+          modalContainer.style.pointerEvents = 'none';
+        }
+      
+        // Show the modal when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+          showPopup();
+        });
+      </script>
 </body>
 
 </html>
