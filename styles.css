@@ -43,7 +43,7 @@
 
   .slide-image img {
       max-width: 100%;
-      max-height: 75%; /* Adjust the height to fit the slide */
+      max-height: 100%; /* Adjust the height to fit the slide */
       object-fit: cover;
   }
 
