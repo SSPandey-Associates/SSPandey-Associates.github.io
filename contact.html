@@ -58,24 +58,27 @@
 
     <main>
         <!-- Main content goes here -->
-        <section id="contact">
+        <!-- Add a formal and elegant contact section -->
+        <section id="contact" class="py-5">
             <div class="container">
-                <h2>Contact Us</h2>
-                <p>If you have any questions or need assistance, please fill out the form below.</p>
+                <h2 class="font-weight-bold text-center">Contact Us</h2>
+                <p class="text-center">For inquiries or assistance, please fill out the form below.</p>
                 <form action="submit_contact_form.php" method="POST">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name" class="font-weight-bold">Name</label>
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email address</label>
+                        <label for="email" class="font-weight-bold">Email Address</label>
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message" class="font-weight-bold">Message</label>
                         <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </form>
             </div>
         </section>
@@ -86,6 +89,7 @@
 
     <footer>
         <!-- Footer content goes here -->
+        <!-- Add a clean and formal footer -->
         <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand" href="">
                 <img src="Pictures/SSP Only logo no text.png" width="150" height="150" alt="SS Pandey & Associates Logo">
