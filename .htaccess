@@ -1,7 +1,10 @@
- ErrorDocument 503 /maintenance.html
- <IfModule mod_rewrite.c>
- RewriteEngine On
- RewriteCond %{REQUEST_URI} !=/maintenance.html
- RewriteCond %{REMOTE_ADDR} !=192.168.0.105
- RewriteRule ^.*$ - [R=503,L]
- </IfModule>
+<Limit GET POST PUT>
+ Order Deny,Allow
+ Deny from all
+ Allow from 192.168.0.105
+</Limit>
+ErrorDocument 403 /maintenance.html
+<Files maintenance.html>
+ Order Allow,Deny
+ Allow from all
+</Files>
