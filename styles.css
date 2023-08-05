@@ -253,55 +253,71 @@
     margin-bottom: 20px;
   }
 
-  /* Styles for the pop-up modal */
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  .popup-modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-
-  .popup-modal .modal {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    text-align: center;
-  }
-
-  .popup-modal .modal-actions {
-    margin-top: 20px;
-  }
-
-  .popup-modal button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .popup-modal button.decline {
-    background-color: #ff4f4f;
-    color: #fff;
-  }
-
-  .popup-modal button.accept {
-    background-color: #5ac35a;
-    color: #fff;
-  }
+    /* Modal */
+    body {
+      font-family: "Arial", sans-serif;
+    }
+  
+    .modal-state {
+      display: none;
+    }
+  
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+  
+    .modal-body {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      text-align: center;
+    }
+  
+    .modal-actions {
+      margin-top: 20px;
+    }
+  
+    .modal-decline,
+    .modal-accept {
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff;
+    }
+  
+    .modal-decline {
+      background-color: #ff4f4f;
+    }
+  
+    .modal-accept {
+      background-color: #5ac35a;
+    }
+  
+    .modal-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  
+    .modal-state:checked~.modal {
+      opacity: 1;
+      pointer-events: auto;
+    }
