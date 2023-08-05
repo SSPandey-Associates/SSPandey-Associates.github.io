@@ -255,6 +255,11 @@
 
   /* Pop-up modal scenes */
 
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   .popup-modal {
     display: flex;
     justify-content: center;
