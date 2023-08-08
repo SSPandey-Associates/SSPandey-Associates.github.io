@@ -45,6 +45,12 @@
             color: #484747; /* Change text color to grey */
         }
 
+        @media (max-width: 767px) {
+            .popup {
+                max-width: 90%;
+            }
+        }
+
         .popup-content input[type="button"] {
             background-color: #000;
             color: #fff;
@@ -74,7 +80,7 @@
     <!-- Pop-up HTML -->
     <div class="overlay" id="overlay"></div>
         <div id="popup" class="popup">
-            <div class="popup-content" id="footer">
+            <div class="popup-content">
                 <h3>Important Disclaimer</h3>
                 <p>The Bar Council of India strictly prohibits Advocates from engaging in any form of advertisement or solicitation.</p>
                 <p>By visiting www.sspandey.com, you acknowledge that you are seeking information about SS Pandey & Associates for personal use only. No solicitation or inducement has been made by SS Pandey & Associates or its members. By clicking 'I AGREE', you understand and agree:</p>
