@@ -1,10 +1,14 @@
-<Limit GET POST PUT>
- Order Deny,Allow
- Deny from all
- Allow from 192.168.0.105
-</Limit>
-ErrorDocument 403 /maintenance.html
-<Files maintenance.html>
- Order Allow,Deny
- Allow from all
-</Files>
+# BEGIN MAINTENANCE MODE
+# ADD your IP address to gain access. Local IPS for local testing
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REMOTE_ADDR} !^192\.168\.1\.70
+#RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1
+RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f
+RewriteCond %{DOCUMENT_ROOT}/maintenance.enable -f
+RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+RewriteRule ^.*$ /maintenance.html [R=503,L]
+ErrorDocument 503 /maintenance.html
+Header Set Cache-Control "max-age=0, no-store"
+</IfModule>
+# END MAINTENANCE MODE
