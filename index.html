@@ -22,11 +22,10 @@
     <title>Website Pop-up</title>
     <style>
         /* CSS to style the pop-up */
-            .popup {
+        .popup {
             position: fixed;
-            top: 1;
-            left: 1;
-            border: 10px #000;
+            bottom: 0; /* Position at the bottom */
+            left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
@@ -34,15 +33,16 @@
             align-items: center;
             justify-content: center;
             z-index: 9999;
-            }
+        }
 
-            .popup-content {
-                background-color: #fff;
-                padding: 20px;
-                max-width: 850px;
-                text-align: center;
-                border: 5px solid #000; /* Add this line for the thin black border */
-            }
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            width: 100%; /* Set width to 100% */
+            max-width: 850px;
+            text-align: center;
+            border: 5px solid #000;
+        }
 
 
             .popup-content input[type="button"] {
