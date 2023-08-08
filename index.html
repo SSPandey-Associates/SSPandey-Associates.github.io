@@ -94,14 +94,14 @@
             var overlay = document.createElement('div');
             overlay.className = 'overlay';
             document.body.appendChild(overlay);
-            document.body.classList.add('overlay-open'); // Prevent scrolling
+            document.body.classList.add('body.overlay-open'); // Prevent scrolling
         }
 
         function hideOverlay() {
             var overlay = document.querySelector('.overlay');
             if (overlay) {
                 overlay.parentNode.removeChild(overlay);
-                document.body.classList.remove('overlay-open'); // Enable scrolling
+                document.body.classList.remove('body.overlay-open'); // Enable scrolling
             }
         }
 
