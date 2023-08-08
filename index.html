@@ -91,47 +91,48 @@
 
     <script>
         function showOverlay() {
-            var overlay = document.createElement('div');
-            overlay.className = 'overlay';
-            document.body.appendChild(overlay);
-            document.body.classList.add('body.overlay-open'); // Prevent scrolling
-        }
+        var overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        document.body.appendChild(overlay);
+        document.body.classList.add('overlay-open'); // Remove 'body.' from classList
+    }
 
-        function hideOverlay() {
-            var overlay = document.querySelector('.overlay');
-            if (overlay) {
-                overlay.parentNode.removeChild(overlay);
-                document.body.classList.remove('body.overlay-open'); // Enable scrolling
-            }
+    function hideOverlay() {
+        var overlay = document.querySelector('.overlay');
+        if (overlay) {
+            overlay.parentNode.removeChild(overlay);
+            document.body.classList.remove('overlay-open'); // Remove 'body.' from classList
         }
+    }
 
-        function acceptDisclaimer() {
-            localStorage.setItem('disclaimerAccepted', 'true');
-            hideOverlay();
-            hidePopup();
+    function acceptDisclaimer() {
+        localStorage.setItem('disclaimerAccepted', 'true');
+        hideOverlay();
+        hidePopup();
+    }
+
+    function denyDisclaimer() {
+        window.history.back();
+    }
+
+    function hidePopup() {
+        var popup = document.getElementById('popup');
+        if (popup) {
+            popup.parentNode.removeChild(popup);
         }
+    }
 
-        function denyDisclaimer() {
-            window.history.back();
-        }
-
-        function hidePopup() {
+    window.addEventListener('load', function() {
+        var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
+        if (!disclaimerAccepted) {
+            showOverlay();
             var popup = document.getElementById('popup');
             if (popup) {
-                popup.parentNode.removeChild(popup);
+                popup.style.display = 'flex';
             }
         }
+    });
 
-        window.addEventListener('load', function() {
-            var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
-            if (!disclaimerAccepted) {
-                showOverlay();
-                var popup = document.getElementById('popup');
-                if (popup) {
-                    popup.style.display = 'flex';
-                }
-            }
-        });
     </script>
 
     <header>
