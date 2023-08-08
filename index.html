@@ -24,11 +24,11 @@
         /* CSS to style the pop-up */
         .popup {
             position: fixed;
-            bottom: 0; /* Position at the bottom */
+            bottom: 15px; /* Shifted up by 15px from absolute bottom */
             left: 0;
             width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            height: auto;
+            /*background-color: rgba(0, 0, 0, 0.5);*/
             display: flex;
             align-items: center;
             justify-content: center;
@@ -58,51 +58,49 @@
     <!-- Pop-up HTML -->
     <div id="popup" class="popup">
         <div class="popup-content" id="footer">
-        <h3>Important Disclaimer</h3>
-        <p>The Bar Council of India strictly prohibits advocates from engaging in any form of advertisement or solicitation.</p>
-        <p>By visiting www.sspandey.com, you acknowledge that you are seeking information about SS Pandey & Advocates for personal use only. No solicitation or inducement has been made by SS Pandey & Advocates or its members. By clicking 'I AGREE', you understand and agree:</p>
-        <ul>
-            <li>You are seeking details about SS Pandey & Advocates, its practice areas, and lawyers, solely for personal information. The website content is purely informative and not intended as solicitation or advertisement. It should not be considered legal advice.</li>
-            <li>The provided information does not establish a lawyer-client relationship or constitute legal opinion.</li>
-            <li>SS Pandey & Advocates cannot be held liable for actions taken based on the website's material/information. All website content is the intellectual property of SS Pandey & Advocates.</li>
-        </ul>
-        <label><input type="button" value="I Agree" onclick="acceptDisclaimer()"></label>
-        <label><input type="button" value="I Deny" onclick="denyDisclaimer()"></label>
+            <h3>Important Disclaimer</h3>
+            <p>The Bar Council of India strictly prohibits advocates from engaging in any form of advertisement or solicitation.</p>
+            <p>By visiting www.sspandey.com, you acknowledge that you are seeking information about SS Pandey & Advocates for personal use only. No solicitation or inducement has been made by SS Pandey & Advocates or its members. By clicking 'I AGREE', you understand and agree:</p>
+            <ul>
+                <li>You are seeking details about SS Pandey & Advocates, its practice areas, and lawyers, solely for personal information. The website content is purely informative and not intended as solicitation or advertisement. It should not be considered legal advice.</li>
+                <li>The provided information does not establish a lawyer-client relationship or constitute legal opinion.</li>
+                <li>SS Pandey & Advocates cannot be held liable for actions taken based on the website's material/information. All website content is the intellectual property of SS Pandey & Advocates.</li>
+            </ul>
+            <label><input type="button" value="I Agree" onclick="acceptDisclaimer()"></label>
+            <label><input type="button" value="I Deny" onclick="denyDisclaimer()"></label>
         </div>
     </div>
-
-
 
     <script>
         // JavaScript functions to handle pop-up behavior
         function acceptDisclaimer() {
-        // Store user acceptance in local storage or session storage
-        localStorage.setItem('disclaimerAccepted', 'true');
-        hidePopup();
+            // Store user acceptance in local storage or session storage
+            localStorage.setItem('disclaimerAccepted', 'true');
+            hidePopup();
         }
 
         function denyDisclaimer() {
-        // Redirect to the previous page
-        window.history.back();
+            // Redirect to the previous page
+            window.history.back();
         }
 
         function hidePopup() {
-        // Hide the pop-up by removing it from the DOM
-        var popup = document.getElementById('popup');
-        if (popup) {
-            popup.parentNode.removeChild(popup);
-        }
+            // Hide the pop-up by removing it from the DOM
+            var popup = document.getElementById('popup');
+            if (popup) {
+                popup.parentNode.removeChild(popup);
+            }
         }
 
         // Show the pop-up only if the disclaimer hasn't been accepted before
         window.addEventListener('load', function() {
-        var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
-        if (!disclaimerAccepted) {
-            var popup = document.getElementById('popup');
-            if (popup) {
-            popup.style.display = 'flex';
+            var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
+            if (!disclaimerAccepted) {
+                var popup = document.getElementById('popup');
+                if (popup) {
+                    popup.style.display = 'flex';
+                }
             }
-        }
         });
     </script>
 
