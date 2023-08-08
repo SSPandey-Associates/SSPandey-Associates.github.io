@@ -33,6 +33,8 @@
             align-items: center;
             justify-content: center;
             z-index: 9999;
+            overflow: hidden; /* Prevent scrolling */
+            pointer-events: none;
         }
 
         .popup-content {
@@ -78,6 +80,13 @@
         function acceptDisclaimer() {
             // Store user acceptance in local storage or session storage
             localStorage.setItem('disclaimerAccepted', 'true');
+            
+            // Remove pointer-events: none; to re-enable interactions
+            var popup = document.getElementById('popup');
+            if (popup) {
+                popup.style.pointerEvents = 'auto';
+            }
+            
             hidePopup();
         }
 
@@ -91,6 +100,9 @@
             var popup = document.getElementById('popup');
             if (popup) {
                 popup.parentNode.removeChild(popup);
+                
+                // Re-enable scrolling after popup is hidden
+                document.body.style.overflow = 'auto';
             }
         }
 
