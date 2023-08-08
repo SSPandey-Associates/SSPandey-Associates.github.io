@@ -4,6 +4,7 @@
   }
 
   
+  /* Header Styles */
   header {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -12,23 +13,30 @@
 
   header .navbar-brand {
     margin: 0 auto;
-    /* Center the logo horizontally */
     display: block;
-    /* Make the logo a block-level element to center it */
   }
 
   .navbar-nav {
     width: 100%;
-    /* Take up the full width of the navbar */
     display: flex;
-    /* Use flexbox to list items horizontally */
     justify-content: center;
-    /* Center the items horizontally */
   }
 
   .navbar-nav .nav-item {
     margin-right: 20px;
-    /* Add some space between the header buttons */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: #ffffff; /* Change text color to white */
+  }
+
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:hover {
+    background-color: #8e8e8e;
   }
 
   /* Footer Styles */
@@ -40,31 +48,29 @@
 
   footer .navbar-brand {
     margin: 0 auto;
-    /* Center the footer logo */
     padding: 10px;
   }
 
   footer .navbar-text {
     padding: 10px;
     text-align: right;
-    /* Style the footer text */
   }
 
-  /* Styling for header and footer navigation buttons */
-  .navbar-nav .nav-item {
-    margin: 0 15px; /* Adjust spacing between navigation items */
+  footer .navbar-nav .nav-item {
+    margin: 0 15px;
   }
 
-  .navbar-nav .nav-link {
+  footer .navbar-nav .nav-link {
     padding: 10px 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    color: #ffffff;
   }
 
-  .navbar-nav .nav-link.active,
-  .navbar-nav .nav-link:hover {
-    background-color: #000000; /* Change background color on hover and for active page */
+  footer .navbar-nav .nav-link.active,
+  footer .navbar-nav .nav-link:hover {
+    background-color: #8e8e8e;
   }
 
 
