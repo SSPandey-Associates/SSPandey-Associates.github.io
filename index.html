@@ -34,16 +34,6 @@
             justify-content: center;
             z-index: 9999;
         }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(24, 24, 24, 0.7); /* Adjust the opacity as needed */
-            z-index: 9998; /* Place the overlay below the popup but above other content */
-        }
-
 
         .popup-content {
             background-color: #fff;
@@ -63,72 +53,79 @@
             margin: 10px;
             cursor: pointer;
         }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
         
     </style>
 
 
     <!-- Pop-up HTML -->
-    <div id="popup" class="popup">
-        <div class="popup-content" id="footer">
-            <h3>Important Disclaimer</h3>
-            <p>The Bar Council of India strictly prohibits Advocates from engaging in any form of advertisement or solicitation.</p>
-            <p>By visiting www.sspandey.com, you acknowledge that you are seeking information about SS Pandey & Associates for personal use only. No solicitation or inducement has been made by SS Pandey & Associates or its members. By clicking 'I AGREE', you understand and agree:</p>
-            <ul>
-                <li>You are seeking details about SS Pandey & Associates, its practice areas, and lawyers, solely for personal information. The website content is purely informative and not intended as solicitation or advertisement. It should not be considered legal advice.</li>
-                <li>The provided information does not establish a lawyer-client relationship or constitute legal opinion.</li>
-                <li>SS Pandey & Associates cannot be held liable for actions taken based on the website's material/information. All website content is the intellectual property of SS Pandey & Associates.</li>
-            </ul>
-            <label><input type="button" value="I Agree" onclick="acceptDisclaimer()"></label>
-            <label><input type="button" value="I Deny" onclick="denyDisclaimer()"></label>
+    <div class="overlay" id="overlay"></div>
+        <div id="popup" class="popup">
+            <div class="popup-content" id="footer">
+                <h3>Important Disclaimer</h3>
+                <p>The Bar Council of India strictly prohibits Advocates from engaging in any form of advertisement or solicitation.</p>
+                <p>By visiting www.sspandey.com, you acknowledge that you are seeking information about SS Pandey & Associates for personal use only. No solicitation or inducement has been made by SS Pandey & Associates or its members. By clicking 'I AGREE', you understand and agree:</p>
+                <ul>
+                    <li>You are seeking details about SS Pandey & Associates, its practice areas, and lawyers, solely for personal information. The website content is purely informative and not intended as solicitation or advertisement. It should not be considered legal advice.</li>
+                    <li>The provided information does not establish a lawyer-client relationship or constitute legal opinion.</li>
+                    <li>SS Pandey & Associates cannot be held liable for actions taken based on the website's material/information. All website content is the intellectual property of SS Pandey & Associates.</li>
+                </ul>
+                <label><input type="button" value="I Agree" onclick="acceptDisclaimer()"></label>
+                <label><input type="button" value="I Deny" onclick="denyDisclaimer()"></label>
+            </div>
         </div>
     </div>
 
     <script>
         function showOverlay() {
-        var overlay = document.createElement('div');
-        overlay.className = 'overlay';
-        document.body.appendChild(overlay);
-    }
-
-    function hideOverlay() {
-        var overlay = document.querySelector('.overlay');
-        if (overlay) {
-            overlay.parentNode.removeChild(overlay);
+            var overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            document.body.appendChild(overlay);
         }
-    }
 
-    function acceptDisclaimer() {
-        // Store user acceptance in local storage or session storage
-        localStorage.setItem('disclaimerAccepted', 'true');
-        hideOverlay();
-        hidePopup();
-    }
-
-    function denyDisclaimer() {
-        // Redirect to the previous page
-        window.history.back();
-    }
-
-    function hidePopup() {
-        // Hide the pop-up by removing it from the DOM
-        var popup = document.getElementById('popup');
-        if (popup) {
-            popup.parentNode.removeChild(popup);
-        }
-    }
-
-    // Show the overlay and pop-up only if the disclaimer hasn't been accepted before
-    window.addEventListener('load', function() {
-        var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
-        if (!disclaimerAccepted) {
-            showOverlay();
-            var popup = document.getElementById('popup');
-            if (popup) {
-                popup.style.display = 'flex';
+        function hideOverlay() {
+            var overlay = document.querySelector('.overlay');
+            if (overlay) {
+                overlay.parentNode.removeChild(overlay);
             }
         }
-    });
 
+        function acceptDisclaimer() {
+            localStorage.setItem('disclaimerAccepted', 'true');
+            hideOverlay();
+            hidePopup();
+        }
+
+        function denyDisclaimer() {
+            window.history.back();
+        }
+
+        function hidePopup() {
+            var popup = document.getElementById('popup');
+            if (popup) {
+                popup.parentNode.removeChild(popup);
+            }
+        }
+
+        window.addEventListener('load', function() {
+            var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
+            if (!disclaimerAccepted) {
+                showOverlay();
+                var popup = document.getElementById('popup');
+                if (popup) {
+                    popup.style.display = 'flex';
+                }
+            }
+        });
     </script>
 
     <header>

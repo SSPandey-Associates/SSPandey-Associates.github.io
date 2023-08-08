@@ -3,6 +3,7 @@
     font-family: "Arial", sans-serif;
   }
 
+  
   header {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -63,7 +64,7 @@
 
   .navbar-nav .nav-link.active,
   .navbar-nav .nav-link:hover {
-    background-color: #f0f0f0; /* Change background color on hover and for active page */
+    background-color: #000000; /* Change background color on hover and for active page */
   }
 
 
