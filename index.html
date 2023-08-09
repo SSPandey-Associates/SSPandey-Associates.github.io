@@ -94,6 +94,37 @@
     </div>
 
     <script>
+
+    window.addEventListener('load', function() {
+        var currentPage = window.location.pathname;
+        var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
+
+        if (!disclaimerAccepted && currentPage === '/index.html') {
+            showOverlay();
+            var popup = document.getElementById('popup');
+            if (popup) {
+                popup.style.display = 'flex';
+            }
+        }
+    });
+
+    function acceptDisclaimer() {
+        localStorage.setItem('disclaimerAccepted', 'true');
+        hideOverlay();
+        hidePopup();
+    }
+
+    function denyDisclaimer() {
+        window.history.back();
+    }
+
+    function hidePopup() {
+        var popup = document.getElementById('popup');
+        if (popup) {
+            popup.parentNode.removeChild(popup);
+        }
+    }
+
         function showOverlay() {
         var overlay = document.createElement('div');
         overlay.className = 'overlay';
@@ -126,18 +157,6 @@
         }
     }
 
-    window.addEventListener('load', function() {
-        var currentPage = window.location.pathname; // Get the current page path
-        var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
-
-        if (!disclaimerAccepted && currentPage === '/index.html') {
-            showOverlay();
-            var popup = document.getElementById('popup');
-            if (popup) {
-                popup.style.display = 'flex';
-            }
-        }
-    });
     </script>
 
     <header>
