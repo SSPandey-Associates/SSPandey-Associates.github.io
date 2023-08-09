@@ -140,6 +140,17 @@
         }
     });
 
+    window.addEventListener('load', function() {
+        var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
+        if (!disclaimerAccepted) {
+            showOverlay();
+            var popup = document.getElementById('popup');
+            if (popup) {
+                popup.style.display = 'flex';
+            }
+        }
+    });
+
     </script>
 
     <header>
