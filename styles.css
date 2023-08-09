@@ -117,6 +117,7 @@
     left: 20px;
     /* Adjust as needed */
     color: #fff;
+    /* Set text color to white */
     max-width: 70%;
     /* Limit content width for readability */
   }
@@ -124,11 +125,15 @@
   .slide-content h3 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #fff;
+    /* Set heading color to white */
   }
 
   .slide-content p {
     font-size: 16px;
     margin-bottom: 20px;
+    color: #fff;
+    /* Set paragraph color to white */
   }
 
   .slide-content .read-more-btn {
