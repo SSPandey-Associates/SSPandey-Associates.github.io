@@ -21,6 +21,129 @@
 </head>
 
 <body>
+    <title>Website Pop-up</title>
+    <style>
+        /* CSS to style the pop-up */
+        .popup {
+            position: fixed;
+            bottom: 15px; /* Shifted up by 15px from absolute bottom */
+            left: 0;
+            width: 100%;
+            height: auto;
+            /*background-color: rgba(0, 0, 0, 0.5);*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            width: 100%; /* Set width to 100% */
+            max-width: 97%;
+            text-align: left;
+            border: 5px solid #000;
+            color: #484747; /* Change text color to grey */
+        }
+
+        @media (max-width: 100%) {
+            .popup {
+                max-width: 90%;
+                max-height: fit-content;
+            }
+        }
+
+        .popup-content input[type="button"] {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+
+        body.overlay-open {
+            overflow: hidden;
+        }
+        
+    </style>
+
+
+    <!-- Pop-up HTML -->
+    <div class="overlay" id="overlay"></div>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h3>Important Disclaimer</h3>
+                <p>The Bar Council of India strictly prohibits Advocates from engaging in any form of advertisement or solicitation.</p>
+                <p>By visiting www.sspandey.com, you acknowledge that you are seeking information about SS Pandey & Associates for personal use only. No solicitation or inducement has been made by SS Pandey & Associates or its members. By clicking 'I AGREE', you understand and agree:</p>
+                <ul>
+                    <li>You are seeking details about SS Pandey & Associates, its practice areas, and lawyers, solely for personal information. The website content is purely informative and not intended as solicitation or advertisement. It should not be considered legal advice.</li>
+                    <li>The provided information does not establish a lawyer-client relationship or constitute legal opinion.</li>
+                    <li>SS Pandey & Associates cannot be held liable for actions taken based on the website's material/information. All website content is the intellectual property of SS Pandey & Associates.</li>
+                </ul>
+                <label><input type="button" value="I Agree" onclick="acceptDisclaimer()"></label>
+                <label><input type="button" value="I Deny" onclick="denyDisclaimer()"></label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showOverlay() {
+        var overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        document.body.appendChild(overlay);
+        document.body.classList.add('overlay-open'); // Remove 'body.' from classList
+    }
+
+    function hideOverlay() {
+        var overlay = document.querySelector('.overlay');
+        if (overlay) {
+            overlay.parentNode.removeChild(overlay);
+            document.body.classList.remove('overlay-open'); // Remove 'body.' from classList
+        }
+    }
+
+    function acceptDisclaimer() {
+        localStorage.setItem('disclaimerAccepted', 'true');
+        hideOverlay();
+        hidePopup();
+    }
+
+    function denyDisclaimer() {
+        window.history.back();
+    }
+
+    function hidePopup() {
+        var popup = document.getElementById('popup');
+        if (popup) {
+            popup.parentNode.removeChild(popup);
+        }
+    }
+
+    window.addEventListener('load', function() {
+        var currentPage = window.location.pathname; // Get the current page path
+        var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
+
+        if (!disclaimerAccepted && currentPage === '/index.html') {
+            showOverlay();
+            var popup = document.getElementById('popup');
+            if (popup) {
+                popup.style.display = 'flex';
+            }
+        }
+    });
+    </script>
     <header>
         <!-- Header content goes here -->
         <!-- Add a clean and elegant navbar -->

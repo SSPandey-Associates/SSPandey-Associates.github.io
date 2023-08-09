@@ -16,9 +16,6 @@
 </head>
 
 <body>
-
-
-
     <title>Website Pop-up</title>
     <style>
         /* CSS to style the pop-up */
@@ -130,8 +127,10 @@
     }
 
     window.addEventListener('load', function() {
+        var currentPage = window.location.pathname; // Get the current page path
         var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
-        if (!disclaimerAccepted) {
+
+        if (!disclaimerAccepted && currentPage === '/index.html') {
             showOverlay();
             var popup = document.getElementById('popup');
             if (popup) {
@@ -139,18 +138,6 @@
             }
         }
     });
-
-    window.addEventListener('load', function() {
-        var disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
-        if (!disclaimerAccepted) {
-            showOverlay();
-            var popup = document.getElementById('popup');
-            if (popup) {
-                popup.style.display = 'flex';
-            }
-        }
-    });
-
     </script>
 
     <header>
