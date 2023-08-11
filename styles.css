@@ -2,7 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
   body {
-    font-family: "EB Garamond", sans-serif;
+    font-family: "EB Garamond", Arial, Helvetica, sans-serif, serif;
   }
 
 
@@ -94,9 +94,6 @@
     max-height: 700px;
   }
 
-  .carousel {
-    z-index: 9999;
-  }
 
   .carousel-inner {
     max-width: 85%;
