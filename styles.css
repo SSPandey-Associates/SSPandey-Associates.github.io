@@ -45,7 +45,6 @@ footer .navbar-nav .nav-link:hover {
   /* Change text color to white on hover and active */
 }
 
-
 main {
   padding: 30px;
   /* Add some padding to the main content sections */
@@ -55,7 +54,6 @@ main {
 #carousel-section {
   max-height: 700px;
 }
-
 
 .carousel-inner {
   max-width: 85%;
@@ -158,10 +156,12 @@ h1,
 h2,
 h3 {
   color: #1a1a1a;
+  font-family: "EB Garamond", Arial, Helvetica, sans-serif, serif;
 }
 
 p {
   color: #545454;
+  font-family: "EB Garamond", Arial, Helvetica, sans-serif, serif;
 }
 
 /* Custom CSS for the image */
