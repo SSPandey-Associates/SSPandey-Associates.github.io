@@ -1,6 +1,8 @@
   /* Custom styles for the law firm aesthetic */
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
   body {
-    font-family: "Arial", sans-serif;
+    font-family: "EB Garamond", sans-serif;
   }
 
 
