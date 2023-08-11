@@ -126,13 +126,13 @@
   /* Reduce the spacing between the carousel controls and items */
   .carousel-control-prev {
     margin-left: -20px;
-    z-index: 1;
+    z-index: 9998;
     /* Add z-index for proper stacking */
   }
 
   .carousel-control-next {
     margin-right: -20px;
-    z-index: 1;
+    z-index: 9999;
     /* Add z-index for proper stacking */
   }
 
