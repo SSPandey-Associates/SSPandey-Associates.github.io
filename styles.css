@@ -211,10 +211,16 @@
     margin-bottom: 20px;
   }
 
+  /*Areas of specializations*/
+  .specialization-image {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
   /* modal */
 
   body {
-    font-family: "Arial", sans-serif;
+    font-family: "EB Garamond", sans-serif;
   }
 
   .modal-state {
