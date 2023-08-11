@@ -88,36 +88,46 @@
   }
 
 
+  /* Reset some default styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Carousel section */
   #carouselSection {
     position: relative;
     width: 75%;
-    max-height: max-content;
-    /* Set carousel width to 75% */
     margin: 0 auto;
-    /* Center the carousel */
     overflow: hidden;
   }
 
+  /* Carousel container */
   .carousel {
     display: flex;
     width: 100%;
-    /* Set the total width of the carousel */
     transition: transform 0.5s ease-in-out;
   }
 
+  /* Individual slide */
   .slide {
     flex: 0 0 100%;
-    /* Set the width of each slide */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 500px;
-    /* Adjust slide height as needed */
     background-size: cover;
     background-position: center;
     position: relative;
   }
 
+  /* Slide content */
   .slide-content {
     position: absolute;
     bottom: 20px;
@@ -136,6 +146,7 @@
     margin-bottom: 20px;
   }
 
+  /* Read more button */
   .slide-content .read-more-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -149,6 +160,29 @@
 
   .slide-content .read-more-btn:hover {
     background-color: #0056b3;
+  }
+
+  /* Carousel navigation */
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .carousel-nav button {
+    background-color: #ddd;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .carousel-nav button.active {
+    background-color: #007bff;
+    color: #fff;
   }
 
   /* Navigation Buttons */
