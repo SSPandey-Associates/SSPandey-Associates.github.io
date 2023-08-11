@@ -283,6 +283,17 @@
             </div>
         </section>
 
+        <script>
+            // Wait for the document to load
+            document.addEventListener("DOMContentLoaded", function() {
+                // Set the interval for automatic carousel slide change
+                setInterval(function() {
+                    const carousel = new bootstrap.Carousel(document.getElementById('carouselExampleIndicators'));
+                    carousel.next();
+                }, 3000); // 3000 milliseconds = 3 seconds
+            });
+        </script>
+
 
         <section id="about" class="py-5">
             <div class="container">
