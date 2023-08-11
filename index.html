@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS file -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io (1)/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io (1)/favicon-32x32.png">
@@ -197,7 +198,7 @@
             <div class="container">
                 <div class="carousel" id="myCarousel">
                     <!-- Slide 1 - Military Law -->
-                    <div class="slide" style="background-image: url('path_to_image_military_law.jpg');">
+                    <div class="slide" style="background-image: url('Pictures/Screen\ Shot\ 2023-07-08\ at\ 1.11.20\ AM.png');">
                         <div class="overlay"></div>
                         <div class="slide-content">
                             <h3>Military Law</h3>
@@ -206,7 +207,7 @@
                         </div>
                     </div>
                     <!-- Slide 2 - Criminal Law -->
-                    <div class="slide" style="background-image: url('path_to_image_criminal_law.jpg');">
+                    <div class="slide" style="background-image: url('Pictures/Screen\ Shot\ 2023-07-08\ at\ 1.11.20\ AM.png');">
                         <div class="overlay"></div>
                         <div class="slide-content">
                             <h3>Criminal Law</h3>
@@ -215,7 +216,7 @@
                         </div>
                     </div>
                     <!-- Slide 3 - Family Law -->
-                    <div class="slide" style="background-image: url('path_to_image_family_law.jpg');">
+                    <div class="slide" style="background-image: url('Pictures/Screen\ Shot\ 2023-07-08\ at\ 1.11.20\ AM.png');">
                         <div class="overlay"></div>
                         <div class="slide-content">
                             <h3>Family Law</h3>
@@ -224,7 +225,7 @@
                         </div>
                     </div>
                     <!-- Slide 4 - Real Estate Law -->
-                    <div class="slide" style="background-image: url('path_to_image_real_estate_law.jpg');">
+                    <div class="slide" style="background-image: url('Pictures/Screen\ Shot\ 2023-07-08\ at\ 1.11.20\ AM.png');">
                         <div class="overlay"></div>
                         <div class="slide-content">
                             <h3>Real Estate Law</h3>
@@ -233,7 +234,7 @@
                         </div>
                     </div>
                     <!-- Slide 5 - Taxation -->
-                    <div class="slide" style="background-image: url('path_to_image_taxation.jpg');">
+                    <div class="slide" style="background-image: url('Pictures/Screen\ Shot\ 2023-07-08\ at\ 1.11.20\ AM.png');">
                         <div class="overlay"></div>
                         <div class="slide-content">
                             <h3>Taxation</h3>
@@ -242,7 +243,7 @@
                         </div>
                     </div>
                     <!-- Slide 6 - Corporate And Commercial -->
-                    <div class="slide" style="background-image: url('path_to_image_corporate_commercial.jpg');">
+                    <div class="slide" style="background-image: url('Pictures/Screen\ Shot\ 2023-07-08\ at\ 1.11.20\ AM.png');">
                         <div class="overlay"></div>
                         <div class="slide-content">
                             <h3>Corporate And Commercial</h3>
@@ -251,7 +252,7 @@
                         </div>
                     </div>
                     <!-- Slide 7 - Arbitration and Conciliation -->
-                    <div class="slide" style="background-image: url('path_to_image_arbitration_conciliation.jpg');">
+                    <div class="slide" style="background-image: url('Pictures/Screen\ Shot\ 2023-07-08\ at\ 1.11.20\ AM.png');">
                         <div class="overlay"></div>
                         <div class="slide-content">
                             <h3>Arbitration and Conciliation</h3>
@@ -260,7 +261,7 @@
                         </div>
                     </div>
                     <!-- Slide 8 - Intellectual Property Law -->
-                    <div class="slide" style="background-image: url('path_to_image_intellectual_property_law.jpg');">
+                    <div class="slide" style="background-image: url('Pictures/Screen\ Shot\ 2023-07-08\ at\ 1.11.20\ AM.png');">
                         <div class="overlay"></div>
                         <div class="slide-content">
                             <h3>Intellectual Property Law</h3>
@@ -277,19 +278,19 @@
             const slides = document.querySelectorAll('.slide');
             const carousel = document.getElementById('myCarousel');
             const carouselNav = document.getElementById('carouselNav');
-    
+
             let currentSlide = 0;
-    
+
             function goToSlide(slideIndex) {
                 if (slideIndex < 0 || slideIndex >= slides.length) return;
-    
+
                 currentSlide = slideIndex;
                 const offset = -currentSlide * 100;
                 carousel.style.transform = `translateX(${offset}%)`;
-    
+
                 updateNavButtons();
             }
-    
+
             function updateNavButtons() {
                 const buttons = carouselNav.querySelectorAll('button');
                 buttons.forEach((button, index) => {
@@ -300,13 +301,14 @@
                     }
                 });
             }
-    
+
             slides.forEach((slide, index) => {
                 const button = document.createElement('button');
+                button.textContent = index + 1; // Display slide number
                 button.addEventListener('click', () => goToSlide(index));
                 carouselNav.appendChild(button);
             });
-    
+
             updateNavButtons();
             setInterval(() => {
                 const nextSlide = (currentSlide + 1) % slides.length;
