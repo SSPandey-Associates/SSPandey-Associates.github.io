@@ -6,6 +6,31 @@ body {
 }
 
 /* Header and Footer Styles */
+header .navbar-text {
+  padding: 10px;
+  text-align: center;
+}
+
+header .navbar-nav .nav-item {
+  margin: 0 15px;
+}
+
+header .navbar-nav .nav-link.active,
+header .navbar-nav .nav-link:hover {
+  background-color: #8e8e8e;
+  color: #ffffff;
+  /* Change text color to white on hover and active */
+}
+
+header .navbar-nav .nav-link {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Add transition for text color */
+  color: #ffffff;
+}
+
 header,
 footer {
   background-color: #000000;
@@ -22,7 +47,7 @@ footer .navbar-brand {
 
 footer .navbar-text {
   padding: 10px;
-  text-align: right;
+  text-align: center;
 }
 
 footer .navbar-nav .nav-item {
